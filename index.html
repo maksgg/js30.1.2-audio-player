@@ -4,36 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Audio player</title>
 </head>
 <body>
-    <img src="./img/lemonade.png" alt="">
-    <audio src="./audio/beyonce.mp3" controls></audio>
-    <div class="container">
-        <div class="container-item-header">
-            <img src="./img/lemonade.png" alt="" class="img-child">
-        </div>
-        <div class="container-item-footer">
-            <div class="content">
-                <img src="./svg/play.png" alt="" class="play">
-                <div>
-                    <p class="author">Beyonce</p>
-                    <p class="name-song">Don`t hurt yourself</p>
-                </div>
-                
-                <div class="arrows">
-                    <img src="./svg/forward.png" alt="" class="arrow">
-                    <img src="./svg/backward.png" alt="" class="arrow">
-                </div>
-            </div>
-            <div class="time-bar">
-                <p class="up-time">3:47</p>
-                <input type="range">
-                <p class="down-time">00:00</p>
-            </div>
-        </div>
-
+  <img src="./img/lemonade.png" alt="" id="coverMain">
+  <audio src="./audio/beyonce.mp3" controls></audio>
+  <div class="container">
+    <div class="container-item-header">
+      <img src="./img/lemonade.png" alt="" class="img-child">
     </div>
-    
+    <div class="container-item-footer">
+      <div class="content">
+        <img src="./svg/play.png" alt="" class="play">
+        <div>
+          <p class="author">Beyonce</p>
+          <p class="name-song">Don`t hurt yourself</p>
+        </div>  
+        <div class="arrows">
+          <img src="./svg/forward.png" alt="" class="arrow" id="nextBtn">
+          <img src="./svg/backward.png" alt="" class="arrow" id="prevBtn">
+        </div>
+      </div>
+      <div class="time-bar">
+        <p class="up-time">3:47</p>
+        <input type="range" id="progressBar" value="0" step="1" min="0">
+        <p class="down-time">00:00</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <p><a href="https://github.com/maksgg">GitHub</a> | 2024</p>
+    <a href="https://rs.school/courses/javascript-preschool-ru"><img src="./svg/rss-logo.svg" alt="Логотип курсу" class="logo"></a>
+  </div>
+  <audio id="audioPlayer">
+    <source src="./audio/beyonce.mp3" type="audio/mpeg">
+  </audio>
+    <script src="./script.js"></script>
 </body>
 </html>
